@@ -1,4 +1,9 @@
 # Week 5 - RISC-V SoC Tapeout Journey (Divya Darshan)
+![GitHub repo size](https://img.shields.io/github/repo-size/DivyaDarshan09/Divya_Darshan-VSD-RISCV-week-5)
+[![Author](https://img.shields.io/badge/Owner-DivyaDarshan09-red)](https://github.com/DivyaDarshan09)
+
+This repository documents the work done in **Week 5** of my 20-week RISC-V SoC Tapeout project powered by VLSI System Design (VSD) and IIT Gandhinagar.
+
 ---
 ## Objective of Week 5
 - To set up the OpenROAD Flow Scripts environment and execute the Floorplan and
@@ -196,6 +201,18 @@ Floorplan stage: Provides a rough estimate of core area and die size.
 Placement stage: Cells are physically positioned → actual area usage becomes visible → utilization rises.
 ```
 ---
+## Challenges Faced and How I Overcame Them
+1. **Installing OpenROAD and Flow Scripts**
+   - Setting up OpenROAD and its flow scripts was the major problem i faced due to multiple dependencies and build steps error. I tried for more than 2 days and not able to rectify it. Then a video of installation was there in youtube by NPTEL in a course called `VLSI Design Flow:RTL to GDS`.
+   I followed it and build the installation perfectly without any errors.
+
+2. **Interpreting DEF and ODB files**
+   - The `.def` and `.odb` files were large and complex, making it hard to know what values to verify.
+   - SO i used chatgpt to view the die and design area, and it gave the following commands `grep DIEAREA`, `less`, and OpenROAD CLI commands (`read_db` and `report_design_area`) to focus on relevant sections for verification.
+
+These are the 2 problems I faced and I overcame it smoothly.
+
+---  
 ## Conclusion
 
 The OpenROAD flow for the GCD design was successfully executed up to the **Floorplan and Placement stages**.
