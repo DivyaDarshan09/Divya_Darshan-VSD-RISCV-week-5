@@ -18,7 +18,7 @@ OpenRoad
 - It aims to create a fully autonomous, open-source, and industrial-grade ASIC design toolchain — helping users go from Verilog RTL → GDSII layout without relying on proprietary EDA software.
 ---
 ## Installation Steps:
-1. Clone and Build OpenROAD
+1. **Clone and Build OpenROAD**
 
 - First, clone the OpenROAD repository — the core physical design engine.
 ```bash
@@ -43,7 +43,7 @@ OpenROAD/build/src/openroad
 ```
 - OpenROAD is now installed and ready for use as a standalone tool or for integration in custom flows.
 
-2. Clone and Set Up OpenROAD-flow-scripts.
+2. **Clone and Set Up OpenROAD-flow-scripts.**
 
 - Next, clone the OpenROAD-flow-scripts repository — which provides a complete automated RTL-to-GDSII flow built around OpenROAD.
 
@@ -82,12 +82,12 @@ openroad
 - Routing and later stages are intentionally skipped for this week.
 ---
 ## Running the Flow
-1. Navigate to Flow Directory
+1. **Navigate to Flow Directory**
 ```bash
 cd OpenROAD-flow-scripts/flow
 ```
 
-2. Execute the Flow for GCD
+2. **Execute the Flow for GCD**
 - Run up to the floorplan and placement stages:
 ```bash
 # Run GCD design flow for floorplan and placement only
@@ -95,7 +95,7 @@ make DESIGN_CONFIG=./designs/sky130hd/gcd/config.mk FLOW_STEPS="synth_floorplan�
 ```
 - This command will restrict the flow till floorplan & Placement.
 
-3. Create results folder
+3. **Create results folder**
 - All generated files will be stored under:
 ```bash
 mkdir -p ~/OpenROAD-flow-scripts/flow/results/sky130hd/gcd/base
@@ -129,12 +129,15 @@ This should open the GUI. Then in the GUI menu:
 - This bypasses the need for read_odb in the Tcl console.
 
 **Screenshot : GUI**
+
 ![gui](Screenshots/gui.jpg)
 
 **Screenshot : Floorplan View**
+
 ![floorplan](Screenshots/floorplan.jpg)
 
 **Screenshot : Placement View**
+
 ![floorplan](Screenshots/placement.jpg)
 
 ---
